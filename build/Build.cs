@@ -18,7 +18,7 @@ class Build : NukeBuild
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
 
-    public static int Main () => Execute<Build>(x => x.Compile);
+    public static int Main() => Execute<Build>(x => x.Compile);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -129,6 +129,14 @@ class Build : NukeBuild
 
     void PackForRider()
     {
+        if (!Directory.Exists(RiderJarDir))
+        {
+            Directory.CreateDirectory(RiderJarDir);
+        }
+        if (!Directory.Exists(RiderDotnetDir))
+        {
+            Directory.CreateDirectory(RiderDotnetDir);
+        }
         ZipFile.CreateFromDirectory(RiderMetaDir,
             RiderJarDir / $"AsyncConverter.Rider.jar");
         File.Copy(RiderBinDir / "AsyncConverter.Rider.dll",
@@ -145,7 +153,7 @@ class Build : NukeBuild
 
     void DeleteFilesInDir(AbsolutePath dir)
     {
-        if(!Directory.Exists(dir))
+        if (!Directory.Exists(dir))
             return;
         foreach (var file in Directory.GetFiles(dir))
         {
