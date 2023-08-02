@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <IsPackable>true</IsPackable>
-    <PackageId>AsyncConverter.AsyncConverter</PackageId>
+    <PackageId>OloAsyncConverter.AsyncConverter</PackageId>
     <Version>1.1.8.36</Version>
     <Authors>i.mamay</Authors>
     <Company />
@@ -11,7 +11,7 @@
     <Copyright>i.mamay</Copyright>
     <Description>Plugin for resharper, for converting code to async.</Description>
     <PackageTags>async</PackageTags>
-    <PackageProjectUrl>https://github.com/BigBabay/AsyncConverter</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/dustinsoftware/AsyncConverter</PackageProjectUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

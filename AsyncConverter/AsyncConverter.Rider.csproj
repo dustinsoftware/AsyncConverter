@@ -2,16 +2,16 @@
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <IsPackable>true</IsPackable>
-    <PackageId>AsyncConverter.Rider</PackageId>
+    <PackageId>OloAsyncConverter.Rider</PackageId>
     <Version>1.2.8.36</Version>
     <Authors>i.mamay</Authors>
     <Company />
     <Product />
-    <Title>AsyncConverter</Title>
+    <Title>OloAsyncConverter</Title>
     <Copyright>i.mamay</Copyright>
     <Description>Plugin for Rider, for converting code to async.</Description>
     <PackageTags>async</PackageTags>
-    <PackageProjectUrl>https://github.com/BigBabay/AsyncConverter</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/dustinsoftware/AsyncConverter</PackageProjectUrl>
     <RootNamespace>AsyncConverter</RootNamespace>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
   </PropertyGroup>
